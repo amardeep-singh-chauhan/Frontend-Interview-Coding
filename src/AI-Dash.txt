@@ -1,0 +1,66 @@
+The UI Requirements
+The Card(s)
+Top: Image  .
+Body: Bold Header, Description.
+Footer: A "Delete" button
+The Grid:
+Must be a responsive grid.
+Feature
+Fetchthe items from URL
+Should be searchable based on title  - local
+Delete - local
+URL: https://api.escuelajs.co/api/v1/products?offset=0&limit=100
+Key Fields to use:
+title (Header)
+description (Description)
+images[0] (The Image URL)
+ 
+ 
+ console.log('1: Start');
+ 
+setTimeout(() => {
+  console.log('2: Timeout');
+}, 0);
+ 
+Promise.resolve()
+.then(() => {
+  console.log('3: Promise 1');
+}).then(() => {
+  console.log('4: Promise 2');
+});
+ 
+async function asyncFn() {
+  console.log('5: Async Start');
+  await Promise.resolve();
+  console.log('6: Async End');
+}
+ 
+asyncFn();
+ 
+console.log('7: End');
+
+1
+7
+5
+6
+3
+4
+2
+
+
+
+const arr = [2, 5, 8, 9, 10];
+const condition = (num) => num % 2 === 0;
+
+const filterMethod = (arr, con) => {
+    const filteredArr = [];
+    for (i = 0; i < arr.length; i++) {
+        if (con(arr[i])) {
+            filteredArr.push(arr[i]);
+        }
+    }
+
+    return filteredArr;
+}
+
+console.log(filterMethod(arr, condition));
