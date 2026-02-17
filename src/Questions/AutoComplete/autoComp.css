@@ -1,0 +1,12 @@
+.country-list-item {
+    padding: 5px;
+}
+
+.country-list-item:hover {
+    background-color: #e4edf8;
+    border-radius: 4px;
+}
+
+.selected-country-item {
+    background-color: #89bbf5;
+}
